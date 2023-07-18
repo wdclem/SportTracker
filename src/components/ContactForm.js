@@ -1,0 +1,1 @@
+I'm Clement, a developer originally from France, currently living in Finland. I enjoy the process of learning while actively working on projects like BScore.
