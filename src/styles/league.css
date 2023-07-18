@@ -1,0 +1,323 @@
+@font-face {
+    font-family: 'YourFontName';
+    src: url('../font/Coves\ Bold.otf') format('otf'),
+         url('../font/Coves\ Light.otf') format('otf');
+  }
+  
+  .top-navigation{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .small-logo {
+    width: 20vh;
+    height: 20vh;
+    background-repeat: no-repeat;
+  }
+
+  .diagonal-box {
+    width: 65%; /* Set the width to 50% to cover the right half of the screen */
+    height: 100%; /* Use viewport height to ensure the shape covers the full height of the screen */
+    transform: skewY(0deg) translateY(-40%);
+    position: absolute; /* Use fixed position to keep the shape in view while scrolling */
+    right: 0;
+    top: 36%;
+    overflow: hidden;
+    z-index: 0;
+    border-radius: 100% 0% 73% 77% / 23% 61% 39% 77% 
+  }
+
+  @media (max-width: 428px) {
+    .small-logo{
+      width: 10vh;
+      height: 10vh;
+    }
+    .diagonal-box {
+      height: 100vh;
+      border-radius: 100% 0% 17% 83% / 31% 100% 0% 69%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .diagonal-box {
+      height: 100vh;
+      border-radius: 100% 0% 76% 24% / 23% 76% 24% 77%;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .diagonal-box {
+      height: 100vh;
+      border-radius: 90% 0% 18% 72% / 27% 90% 0% 62%;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .diagonal-box {
+      height: 105vh;
+      border-radius: 100% 0% 83% 27% / 23% 61% 39% 77%;
+    }
+  }
+  
+  
+  .diagonal-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -50%; /* Adjust the right value to modify the right side of the shape */
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  
+  * {
+    font-family: 'Coves', sans-serif;
+  }
+
+  .bg-image{
+    height: 100%;
+    justify-content: center;
+    background-position: 50% ;
+    z-index: 100;
+    background-image: url('../assets/BScorelogo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+    .LargeContainer {
+      max-width: 440px;
+      width: fit-content;
+      font-family: 'Coves', sans-serif;
+      position: relative;
+      z-index: 0;
+    }   
+    .SmallContainer {
+      display: flex;
+      justify-content: space-between;
+    }
+    .MediumContainer {
+      display: flex;
+      justify-content: space-between;
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  .fix-button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10vh;
+    margin-right: 20vh; /* Adjust the margin to control the spacing between the buttons */
+    margin-top: 10vh;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+
+  button{ 
+    margin-top: 4vh;
+    width: 30vh;
+    height: 20vh;
+    position: relative;
+    background-size: contain;
+    background-color: #FEFCD6;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* border: solid;
+    border-color: #593228; */
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    padding: 1rem 3rem;
+    transition: 0.3s;
+    border-radius: 5vh;
+    box-shadow: inset 0 0 0 0,5px #FFFDD0, 0 0 0 4px #FEFCD6;
+  }
+
+  .left-button {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adjust the gap to control the vertical spacing between the buttons */
+  }
+  
+  .right-button {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adjust the gap to control the vertical spacing between the buttons */
+  }
+  
+  button.nba {
+    background-image: url(../assets/nbalogo.png);
+  }
+  
+  button.nhl {
+    background-image: url(../assets/nhllogo.png);
+  }
+  
+  button.nfl {
+    background-image: url(../assets/nfllogo.png);
+  }
+  
+  button.mlb {
+    background-image: url(../assets/mlbLogo.png);
+  }
+  
+  button:hover {
+    letter-spacing: 0.2rem;
+    padding: 1.1rem 3.1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+    animation: box 3s infinite;
+  }
+  
+  button:hover span,
+  button.nba span,
+  button.nhl span,
+  button.nfl span,
+  button.mlb span {
+    display: none;
+  }
+  
+  button span {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* button i {
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+  
+  button i::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 8px;
+    left: 80%;
+    top: -5px;
+    border: 2px solid var(--clr);
+    background: #593228;
+    transition: 0.2s;
+    border-radius: 80%;
+  }
+  
+  button:hover i::before {
+    width: 10px;
+    height: 8px;
+    background: #593228;
+    left: 20%;
+    animation: move 3s infinite;
+  }
+  
+  button i::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 8px;
+    left: 20%;
+    bottom: -5px;
+    border: 2px solid var(--clr);
+    background: #593228; 
+    transition: 0.2s;
+    border-radius: 50%;
+  }
+  
+  button:hover i::after {
+    width: 15px;
+    left: 80%;
+    animation: move 3s infinite;
+  } */
+  
+  @keyframes move {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes box {
+    0% {
+      box-shadow: #593228;
+    }
+    50% {
+      box-shadow: 0 0 25px var(--clr);
+    }
+    100% {
+      box-shadow: #593228;
+    }
+  }
+  
+  .custom-button {
+    position: fixed;
+    width: 7vh;
+    height: 7vh;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* border: solid;
+    border-color: #71AED7; */
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    padding: 1rem 3rem;
+    transition: 0.3s;
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 0,5px #FFFDD0, 0 0 0 4px #FEFCD6;
+    margin-bottom: 2vh;
+  }
+
+  .crosshair {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+  }
+  
+  .vertical-line,
+  .horizontal-line {
+    position: absolute;
+    background-color: black;
+  }
+  
+  .vertical-line {
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    transform: translateX(-50%);
+  }
+  
+  .horizontal-line {
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 2px;
+    transform: translateY(-50%);
+  }
+  
+  .social-logo{
+      color: #593228;
+      bottom: 20px;
+      overflow: hidden;
+      height: 72px;
+      line-height: 60px;
+      user-select: none;
+  }
