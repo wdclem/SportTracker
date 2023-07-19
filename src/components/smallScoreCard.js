@@ -2,9 +2,9 @@ const smallScoreCard = ({ logo, teamName, score, result, location}) => {
     console.log(result);
   
       return (
-    <div class={`flex p-0 ${result === 'win' ? 'bg-lime-200' : 'bg-rose-500'} border-2 border-[#593228] max-h-[150px] min-h-[150px] min-w-[380px] max-w-[350px]`}>
+    <div class={`{isSmallScreen ? 'custom-button NHL' : 'button NHL mt-0'}flex p-0 ${result === 'win' ? 'bg-lime-200' : 'bg-rose-500'} border-2 border-[#593228] max-h-[84px] min-h-[74px] min-w- max-w-[375px]`}>
     <div class={`w-[120px] mb-4 relative z-10 before:absolute before:rounded-br-xl before:shadow-lg before:shadow-black before:w-24 before:h-4/5 ${result === 'win' ? 'before:bg-teal-100' : 'before:bg-red-100'}`}>
-      <img src={logo} alt="" class=" absolute z-10 inset-0 w-3/3 h-2/3 object-contain rounded-lg" loading="lazy" />
+      <img src={logo} alt="" class=" absolute z-10 inset-0 w-[20px] h-20[px] object-contain rounded-lg" loading="lazy" />
     </div>
     <form class="flex-auto">
       <div class={`relative max-h-[90px] min-h-[100px] flex flex-wrap items-baseline pb-2 ${result === 'win' ? 'before:bg-teal-600' : 'before:bg-red-600'} before:absolute before:top-0 before:bottom-0 before:-left-20 before:-right-0`}>

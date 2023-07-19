@@ -1,6 +1,7 @@
 import React, { useEffect, useContext, useState } from 'react';
 import { LeagueContext } from '../LeagueContext';
 import { useNavigate, useParams } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 import NavBar from './navBar';
 import ScoreCard from './scoreCard';
 import LeagueButton from './leagueButton';
@@ -11,6 +12,8 @@ const LeagueGames = ({ selectedBackground, selectedBackgroundColor}) => {
   const [games, setGames] = useState([]);
   const navigate = useNavigate();
   const { selectedLeague } = useParams();
+  const isSmallScreen = useMediaQuery({ maxWidth: 1100});
+  const isSmallHeight= useMediaQuery({ maxHeight: 570});
 
   useEffect(() => {
     const fetchGameData = async () => {
@@ -68,18 +71,18 @@ const LeagueGames = ({ selectedBackground, selectedBackgroundColor}) => {
    <div className='relative>'>   
    {/* <div className="diagonal-box bg-[#38C968] z-1"></div> */}
    </div>
-    <div className="fix-button-container pb-8 justify-start">
+    <NavBar/>
+    <div className={`${isSmallScreen ? 'flex justify-center' : 'fix-button-container'} pb-8 justify-center}`}>
         <LeagueButton className={`custom-button NBA`} league="NBA" onClick={handleButton} />
         <LeagueButton className={`custom-button NFL`} league="NFL" onClick={handleButton} />
         <LeagueButton className={`custom-button NHL`} league="NHL" onClick={handleButton} />
         <LeagueButton className={`custom-button MLB`} league="MLB" onClick={handleButton} />
     </div>
-    <NavBar/>
     <div className="flex items-center justify-center z-10">
       <p className="text-center text-lg font-bold text-rose-200 lg:text-xl dark:text-[#593228]"></p>
       <h2 className="text-center text-2xl font-extrabold text-[#593228]">{selectedLeague} Result</h2>
     </div>
-    <div className="overflow-y-auto max-h-[66vh] w-auto items-center justify-center">
+    <div className={`${isSmallHeight ? '' : 'max-h-[66vh]'} overflow-y-auto  w-auto items-center justify-center}`}>
         {games.map((game) => {
           const awayScore = parseInt(game.awayScore, 10);
           const homeScore = parseInt(game.homeScore, 10);
