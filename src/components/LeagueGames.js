@@ -3,6 +3,7 @@ import { LeagueContext } from '../LeagueContext';
 import { useNavigate, useParams } from 'react-router-dom';
 import NavBar from './navBar';
 import ScoreCard from './scoreCard';
+import LeagueButton from './leagueButton';
 import '../styles/league.css';
 
 const LeagueGames = ({ selectedBackground, selectedBackgroundColor}) => {
@@ -67,32 +68,24 @@ const LeagueGames = ({ selectedBackground, selectedBackgroundColor}) => {
    <div className='relative>'>   
    {/* <div className="diagonal-box bg-[#38C968] z-1"></div> */}
    </div>
-     <div className="fix-button-container py-5 justify-start">
-        <button className={`custom-button nba bg-${bgColor}`} onClick={() => handleButton('NBA')} style={{ '--clr': '#71AED7' }}>
-            <i></i>
-          </button>
-          <button className="custom-button nfl" onClick={() => handleButton('NFL')} style={{ '--clr': '#71AED7' }}>
-            <i></i>
-          </button>
-          <button className="custom-button nhl" onClick={() => handleButton('NHL')} style={{ '--clr': '#71AED7' }}>
-            <i></i>
-          </button>
-          <button className="custom-button mlb" onClick={() => handleButton('MLB')} style={{ '--clr': '#71AED7' }}>
-            <i></i>
-          </button>
-      </div>
+    <div className="fix-button-container pb-8 justify-start">
+        <LeagueButton className={`custom-button NBA`} league="NBA" onClick={handleButton} />
+        <LeagueButton className={`custom-button NFL`} league="NFL" onClick={handleButton} />
+        <LeagueButton className={`custom-button NHL`} league="NHL" onClick={handleButton} />
+        <LeagueButton className={`custom-button MLB`} league="MLB" onClick={handleButton} />
+    </div>
     <NavBar/>
     <div className="flex items-center justify-center z-10">
       <p className="text-center text-lg font-bold text-rose-200 lg:text-xl dark:text-[#593228]"></p>
       <h2 className="text-center text-2xl font-extrabold text-[#593228]">{selectedLeague} Result</h2>
     </div>
-    <div className="mx-auto px-4 md:px-0">
+    <div className="overflow-y-auto max-h-[66vh] w-auto items-center justify-center">
         {games.map((game) => {
           const awayScore = parseInt(game.awayScore, 10);
           const homeScore = parseInt(game.homeScore, 10);
           return (
-            <div key={game.id} className="flex justify-center">
-              <div className="md:inline-flex ">
+            <div key={game.id} className="flex">
+              <div className="mx-auto my-auto md:inline-flex">
               <div className="mr-4">
                 <ScoreCard
                   logo={game.awayLogo}
@@ -102,7 +95,7 @@ const LeagueGames = ({ selectedBackground, selectedBackgroundColor}) => {
                   location='away'
                 />
               </div>
-              <div className="mr-4">
+              <div className="mr-4 pb-4">
                 <ScoreCard
                   logo={game.homeLogo}
                   teamName={game.homeTeam}

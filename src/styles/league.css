@@ -155,19 +155,19 @@
     gap: 10px; /* Adjust the gap to control the vertical spacing between the buttons */
   }
   
-  button.nba {
+  button.NBA{
     background-image: url(../assets/nbalogo.png);
   }
   
-  button.nhl {
+  button.NHL{
     background-image: url(../assets/nhllogo.png);
   }
   
-  button.nfl {
+  button.NFL{
     background-image: url(../assets/nfllogo.png);
   }
   
-  button.mlb {
+  button.MLB{
     background-image: url(../assets/mlbLogo.png);
   }
   
@@ -176,8 +176,8 @@
     padding: 1.1rem 3.1rem;
     background-position: center;
     background-repeat: no-repeat;
-    color: var(--clr);
-    box-shadow: 0 0 35px var(--clr);
+    color: #FFF4F0;
+    box-shadow: 0 0 35px #FFF4F0;
     animation: box 3s infinite;
   }
   
@@ -257,7 +257,7 @@
       box-shadow: #593228;
     }
     50% {
-      box-shadow: 0 0 25px var(--clr);
+      box-shadow: 0 0 25px #FFF4F0;
     }
     100% {
       box-shadow: #593228;

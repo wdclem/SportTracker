@@ -4,6 +4,7 @@ import LandingPageRoute from './LandingPageRoute';
 import LeagueSelectorRoute from './LeagueSelectorRoute';
 import LeagueGamesRoute from './LeagueGamesRoute';
 import AboutRoute from './AboutRoute';
+import ContactRoute from './contact';
 
 const AppRoutes = ({ selectedBackgroundImage, selectedBackgroundColor }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -22,15 +23,24 @@ const AppRoutes = ({ selectedBackgroundImage, selectedBackgroundColor }) => {
           selectedBackgroundImage={selectedBackgroundImage} 
           selectedBackgroundColor={selectedBackgroundColor} />}
       />
-      <Route path="/league-results/:selectedLeague" 
+      <Route 
+        path="/league-results/:selectedLeague" 
         element={<LeagueGamesRoute 
-          selectedBackground={selectedBackgroundImage} />}
-          selectedBackgroundColor={selectedBackgroundColor} 
+          selectedBackground={selectedBackgroundImage} 
+          selectedBackgroundColor={selectedBackgroundColor} />}
       />
-    <Route path="/about" 
-       element={<AboutRoute
-        selectedBackground={selectedBackgroundImage} />} 
-        selectedBackgroundColor={selectedBackgroundColor} />
+      <Route 
+        path="/contact" 
+        element={<ContactRoute
+          selectedBackground={selectedBackgroundImage} 
+          selectedBackgroundColor={selectedBackgroundColor} />}
+      />
+      <Route 
+        path="/about" 
+        element={<AboutRoute
+          selectedBackground={selectedBackgroundImage} 
+          selectedBackgroundColor={selectedBackgroundColor} />}
+      />
     </Routes>
   );
 };

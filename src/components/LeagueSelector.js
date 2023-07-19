@@ -4,9 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { CSSPlugin } from 'gsap/CSSPlugin';
 import { LeagueContext } from '../LeagueContext';
-import LoadingEffect from './LoadingEffect';
-import NavBar from './navBar';
 import {handleLeagueButton} from '../utilities/buttonhelpers';
+import LoadingEffect from './LoadingEffect';
+import LeagueButton from './leagueButton';
+import NavBar from './navBar';
 import  bleftBlob from '../assets/bleftblob.svg'
 import '../styles/league.css';
 
@@ -77,36 +78,12 @@ return (
   {/* Buttons on the right side */}
   <div className={`${isSmallScreen ? 'relative top-16 flex-row' : isMediumScreen ? 'MediumContainer' : 'SmallContainer'} ml-10 items-center`}>
     <div className="left-button mt-20">
-      <button
-        className={isSmallScreen ? 'custom-button nba' : 'button nba mt-0'}
-        onClick={() => handleClick('NBA')}
-        style={{ '--clr': '#FFF4F0' }}
-      >
-        <i></i>
-      </button>
-      <button
-        className={isSmallScreen ? 'custom-button nfl' : 'button nfl'}
-        onClick={() => handleClick('NFL')}
-        style={{ '--clr': '#FFF4F0' }}
-      >
-        <i></i>
-      </button>
+      <LeagueButton className={isSmallScreen ? 'custom-button NBA' : 'button NBA mt-0'} league="NBA" onClick={handleClick} />
+      <LeagueButton className={isSmallScreen ? 'custom-button NFL' : 'button NFL mt-0'} league="NFL" onClick={handleClick} />
     </div>
     <div className={`${isSmallScreen ? 'right-button mr-4' : isMediumScreen ? 'right-button ml-6 mr-4' : 'right-button ml-6 padding-16'} mb-14 `}>
-      <button
-        className={isSmallScreen ? 'custom-button nhl' : 'button nhl'}
-        onClick={() => handleClick('NHL')}
-        style={{ '--clr': '#FFF4F0' }}
-      >
-        <i></i>
-      </button>
-      <button
-        className={isSmallScreen ? 'custom-button mlb' : 'button mlb'}
-        onClick={() => handleClick('MLB')}
-        style={{ '--clr': '#FFF4F0' }}
-      >
-        <i></i>
-      </button>
+      <LeagueButton className={isSmallScreen ? 'custom-button NHL' : 'button NHL mt-0'} league="NHL" onClick={handleClick} />
+      <LeagueButton className={isSmallScreen ? 'custom-button MLB' : 'button MLB mt-0'} league="MLB" onClick={handleClick} />
     </div>
     {/* <div class="crosshair">
   <div class="vertical-line"></div>
