@@ -9,20 +9,17 @@ const ContactForm = ({ selectedBackground, selectedBackgroundColor}) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // You can add your logic here to handle the form submission, such as sending the data to an API or email service.
 
-    // After form submission, you may want to reset the form fields:
     setName('');
     setEmail('');
     setMessage('');
 
-    // Optionally, you can display a success message to the user or perform other actions.
   };
 
 return (
     <section className="bg-gradient-to-r from-orange-200 via-yellow-200 to-yellow-100">
         <NavBar/>
-      <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+      <div className="max-h-[66vh] py-8 lg:py-16 px-4 mx-auto max-w-screen-md overflow-y-auto">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-[#462720]">Contact Us</h2>
           <p className="mb-8 lg:mb-16 font-light text-center text-[#462720] sm:text-xl">Got a technical issue? Want to send feedback about a feature? Let us know.</p>
           <form action="#" className="space-y-8">

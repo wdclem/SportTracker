@@ -12,7 +12,7 @@ const AboutSection = ({ selectedBackground, selectedBackgroundColor }) => {
     <div className='flex max-w-[640px] max-h-[600px] mx-auto'>
       <div className={`mx-auto leading-normal ${bgColor}`}> 
         <div className="py-8 px-4 mx-auto lg:py-16 lg:px-6">
-          <div className="max-w-screen-lg text-blue-500 sm:text-lg dark:text-[#593228]">
+          <div className="max-w-screen-lg max-h-[66vh] overflow-y-auto text-blue-500 sm:text-lg dark:text-[#593228]">
             <h2 className="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white text-center">
               About <span className="font-extrabold">BScore</span>
             </h2>

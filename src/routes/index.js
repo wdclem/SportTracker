@@ -4,7 +4,7 @@ import LandingPageRoute from './LandingPageRoute';
 import LeagueSelectorRoute from './LeagueSelectorRoute';
 import LeagueGamesRoute from './LeagueGamesRoute';
 import AboutRoute from './AboutRoute';
-import ContactRoute from './contact';
+import ContactRoute from './ContactRoute';
 
 const AppRoutes = ({ selectedBackgroundImage, selectedBackgroundColor }) => {
   const [isLoading, setIsLoading] = useState(false);
