@@ -6,7 +6,7 @@ import linkedinLogo from '../assets/linkedinlogo.png';
 const SocialLinks = () =>{
     return(
         <div className='relative'>
-        <div className='fixed flex bottom-2 gap-3 left-1/2 transform -translate-x-1/2'>
+        <div className='fixed flex bottom-1 gap-3 left-1/2 transform -translate-x-1/2 '>
           <a href="/">
             <img src={linkedinLogo} className="w-5 h-5" alt="linkedin" />
           </a>

@@ -13,7 +13,7 @@ const LeagueGames = ({ selectedBackground, selectedBackgroundColor}) => {
   const navigate = useNavigate();
   const { selectedLeague } = useParams();
   const isSmallScreen = useMediaQuery({ maxWidth: 1100});
-  const isSmallHeight= useMediaQuery({ maxHeight: 570});
+  const isSmallHeight= useMediaQuery({ maxHeight: 550});
 
   useEffect(() => {
     const fetchGameData = async () => {
@@ -72,7 +72,7 @@ const LeagueGames = ({ selectedBackground, selectedBackgroundColor}) => {
    {/* <div className="diagonal-box bg-[#38C968] z-1"></div> */}
    </div>
     <NavBar/>
-    <div className={`${isSmallScreen ? 'flex justify-center' : 'fix-button-container'} pb-8 justify-center}`}>
+    <div className={`${isSmallScreen ? 'flex justify-center gap-2' : 'fix-button-container'} pb-8 justify-center}`}>
         <LeagueButton className={`custom-button NBA`} league="NBA" onClick={handleButton} />
         <LeagueButton className={`custom-button NFL`} league="NFL" onClick={handleButton} />
         <LeagueButton className={`custom-button NHL`} league="NHL" onClick={handleButton} />
@@ -82,7 +82,7 @@ const LeagueGames = ({ selectedBackground, selectedBackgroundColor}) => {
       <p className="text-center text-lg font-bold text-rose-200 lg:text-xl dark:text-[#593228]"></p>
       <h2 className="text-center text-2xl font-extrabold text-[#593228]">{selectedLeague} Result</h2>
     </div>
-    <div className={`${isSmallHeight ? '' : 'max-h-[66vh]'} overflow-y-auto  w-auto items-center justify-center}`}>
+    <div className="max-h-[66vh] overflow-y-auto w-auto items-center justify-center mb-[30px]">
         {games.map((game) => {
           const awayScore = parseInt(game.awayScore, 10);
           const homeScore = parseInt(game.homeScore, 10);

@@ -11,13 +11,13 @@ const NavBar = () => {
               </a>
             </div>
             <div className="flex items-center gap-4 space-x-2">
-              <a className="font-bold text-[#593228]" href="/league-selector">
+              <a className="font-semibold text-[#593228]" href="/league-selector">
                 Homepage
               </a>
               <a className="font-semibold text-[#593228]" href="/about">
                 About
               </a>
-              <a className="font-medium text-[#593228]" href="/contact">
+              <a className="font-semibold text-[#593228]" href="/contact">
                 Contact
               </a>
             </div>
