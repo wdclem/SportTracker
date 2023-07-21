@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactSection from '../components/contactForm';
+import ContactSection from '../components/ContactForm';
 
 const ContactRoute = ({ selectedBackground, selectedBackgroundColor}) => {
   return <ContactSection selectedBackground={selectedBackground} selectedBackgroundColor={selectedBackgroundColor}/>;
