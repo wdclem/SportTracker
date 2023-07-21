@@ -10,6 +10,7 @@ import LeagueButton from './leagueButton';
 import NavBar from './navBar';
 import  bleftBlob from '../assets/bleftblob.svg'
 import '../styles/league.css';
+import SocialLinks from './socialLinks';
 
 gsap.registerPlugin(CSSPlugin);
 
@@ -37,41 +38,44 @@ return (
     <img src={bleftBlob} alt='bottom-left-blob' className='h-full w-full object-cover' />
    </div>
   </div> */}
-    {isLoading && (
+    {/* {isLoading && (
       <LoadingEffect
         duration={3000}
         selectedBackgroundImage={selectedBackgroundImage}
         selectedBackgroundColor={selectedBackgroundColor}
       />
-    )}
+    )} */}
   <NavBar/>
   <div className="flex items-center justify-center z-1">
-    <div className={isSmallScreen ? 'Large-Container mt-4 pt-20 ml-10 row items-center' : 'LargeContainer items-center ml-10'}>
+    <div className={isSmallScreen ? 'z-10 mt-4 pt-20 ml-10 row items-center' : 'LargeContainer items-center ml-10'}>
     {/* Content on the left side */}
 
-    <h1 className={`${isSmallScreen ? 'mt-0' : ''} mb-4 top text-center text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl`}>
+    <h1 className={`${isSmallScreen ? 'mt-0' : ''} mb-4 top text-center text-3xl font-extrabold text-gray-900 md:text-5xl lg:text-6xl`}>
       <span
         style={{
-          background: 'linear-gradient(to right, #BA9010, #352B2D)',
+          background: 'linear-gradient(to right, #BA9010, #000033)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
         }}
       >
         The Better
       </span>
-      <span className="text-[#593228]"> ScoreAPP.</span>
+      <span className="text-[#000033]"> ScoreAPP.</span>
     </h1>
-    <p className="text-center text-lg font-normal text-rose-200 lg:text-xl dark:text-[#593228]">
-      At BSCORE, we focus on making life easier
+    <p className="text-center text-lg font-normal lg:text-xl text-[#000033]">
+      At BSCORE, we are making it simple
     </p>
-    <p className="text-center text-lg font-normal text-rose-200 lg:text-xl dark:text-[#593228]">
-      letting you check the latest results of all your favorite league.
+    <p className="text-center text-lg font-normal lg:text-xl text-[#000033]">
+      check the results your favorite leagues.
     </p>
-    <p className="text-center text-lg font-bold text-rose-200 lg:text-xl dark:text-[#593228]">
+    <h2 className="text-center text-lg font-bold lg:text-xl text-[#000033]">
       in ONE place
-    </p>
-    <h2 className="text-center text-2xl font-extrabold text-[#593228]">
-      Pick your league!
+    </h2>
+    <h2 className="text-center text-2xl font-extrabold text-[#000033]">
+      Start now
+    </h2>
+    <h2 className="text-center text-2xl font-extrabold text-[#000033]">
+    {'\u2192'}
     </h2>
   </div>
 
@@ -92,6 +96,7 @@ return (
   </div>
 </div>
 </div>
+<SocialLinks/>
 </div>
  )
 };

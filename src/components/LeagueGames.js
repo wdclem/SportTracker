@@ -6,6 +6,7 @@ import NavBar from './navBar';
 import ScoreCard from './scoreCard';
 import LeagueButton from './leagueButton';
 import '../styles/league.css';
+import SocialLinks from './socialLinks';
 
 const LeagueGames = ({ selectedBackground, selectedBackgroundColor}) => {
   const { selectedLeagues } = useContext(LeagueContext);
@@ -72,7 +73,7 @@ const LeagueGames = ({ selectedBackground, selectedBackgroundColor}) => {
    {/* <div className="diagonal-box bg-[#38C968] z-1"></div> */}
    </div>
     <NavBar/>
-    <div className={`${isSmallScreen ? 'flex justify-center gap-2' : 'fix-button-container'} pb-8 justify-center}`}>
+    <div className={`${isSmallScreen ? 'flex object-cover justify-center gap-2' : 'fix-button-container'} pb-8 justify-center}`}>
         <LeagueButton className={`custom-button NBA`} league="NBA" onClick={handleButton} />
         <LeagueButton className={`custom-button NFL`} league="NFL" onClick={handleButton} />
         <LeagueButton className={`custom-button NHL`} league="NHL" onClick={handleButton} />
@@ -82,7 +83,7 @@ const LeagueGames = ({ selectedBackground, selectedBackgroundColor}) => {
       <p className="text-center text-lg font-bold text-rose-200 lg:text-xl dark:text-[#593228]"></p>
       <h2 className="text-center text-2xl font-extrabold text-[#593228]">{selectedLeague} Result</h2>
     </div>
-    <div className="max-h-[66vh] overflow-y-auto w-auto items-center justify-center mb-[30px]">
+    <div className="max-h-[66vh] overflow-y-auto w-auto items-center justify-center">
         {games.map((game) => {
           const awayScore = parseInt(game.awayScore, 10);
           const homeScore = parseInt(game.homeScore, 10);

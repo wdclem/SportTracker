@@ -6,7 +6,7 @@ const LandingPage = () => {
   return (
   <div className="bg-gradient-to-r from-orange-200 via-yellow-200 to-yellow-100">
       <h1 className="name">
-        <span className="copy-wrap">
+        <span className="copy-wrap mt-4 sm:text-lg">
           The better ScoreAPP 
         </span>
       </h1>
@@ -18,7 +18,7 @@ const LandingPage = () => {
       <div className="card-no-hover">
         <div className="card-title-wrap">
           <h1 className="title no-hover">
-            <span className="copy-wrap">
+            <span className="copy-wrap text-8xl">
               BScore 
             </span>
           </h1>

@@ -39,16 +39,6 @@
     background-image: linear-gradient(to bottom, #38C968 70%, #38C968, #4DAB55 );
 }
 
-  
-/* Custom CSS class */
-.gradient-background {
-    background-image: linear-gradient(rgb(243, 244, 246), rgb(224, 231, 255), rgb(165, 180, 252));
-  }
-
-.text-color {
-  color: #ffffff; /* Replace with your desired text color */
-}
-
 /*
 
     CSS3 Page Transition
@@ -168,8 +158,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    background: linear-gradient(230deg, #593228, #FFC502, #fff);
-    /*background: linear-gradient(230deg,#a24bcf,#4b79cf,#4bc5cf);i*/
+    background: linear-gradient(230deg, #000033, #FFC502, #fff);
     background-clip: content-box;
     background-size: 200% 200%;
     border-color: currentColor; 
@@ -249,7 +238,7 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: 50% 50%;
-      background-image: url('../assets/BScorelogo.png');
+      background-image: url('../assets/Bshomelogo.png');
       will-change: transform;
     transform: perspective(600px);
     z-index: 100;
@@ -307,14 +296,13 @@
   //--------------------------------------------------*/
   
   .title {
-    font-size: 140px;
     font-family: 'Coves', sans-serif;
     letter-spacing: 0.1em;
       text-transform: uppercase;
       margin: 0;
       font-weight: 900;
       overflow: hidden;
-      color :  #593228;
+      color :  #000033;
       mix-blend-mode: overlay;
   }
   
@@ -330,24 +318,24 @@
       transform: translate3d(-50%,0,0);
       font-weight: 800; 
       overflow: hidden;
-      font-size: 16px;
       font-weight: 800;
       letter-spacing: 0.4em;
   }
   
   .name {
-    color: #593228;
-      top: 53px;
+    color: #000033;
+    top: 53px;
   }
   
   .copy-wrap {
-      display: block;
       transition: all 0.7s 0s ease-in-out;
-    position: relative;
+      position: relative;
+      display: inline-block;
+      text-align: center;
   }
   
   .copyright {
-    color: #593228;
+    color: #000033;
     bottom: 20px;
     overflow: hidden;
     height: 72px;

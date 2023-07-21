@@ -93,7 +93,7 @@
       width: fit-content;
       font-family: 'Coves', sans-serif;
       position: relative;
-      z-index: 0;
+      z-index: 10;
     }   
     .SmallContainer {
       display: flex;
@@ -119,8 +119,8 @@
     margin-top: 10vh;
     position: fixed;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 40%;
+    transform: translateY(-40%);
   }
 
 
@@ -153,6 +153,10 @@
     display: flex;
     flex-direction: column;
     gap: 10px; /* Adjust the gap to control the vertical spacing between the buttons */
+  }
+
+  button.contact{
+    background-image: url(../assets/logo.png);
   }
   
   button.NBA{
@@ -265,17 +269,15 @@
   }
   
   .custom-button {
-    position: fixed;
-    width: 7vh;
+    width: 4vh;
     height: 7vh;
     position: relative;
     background-size: contain;
     background-repeat: no-repeat;
     /* border: solid;
     border-color: #71AED7; */
+    text-align: center;
     letter-spacing: 0.1rem;
-    font-size: 1rem;
-    padding: 1rem 3rem;
     transition: 0.3s;
     border-radius: 8px;
     box-shadow: inset 0 0 0 0,5px #FFFDD0, 0 0 0 4px #FEFCD6;
