@@ -3,7 +3,6 @@ import { useMediaQuery } from 'react-responsive';
 const scoreCard = ({ logo, teamName, score, result, location, record}) => {
   // console.log(result);
   const isSmallScreen = useMediaQuery({ maxWidth: 1100});
-  record = '56-46'
     return (
   <div className={`${isSmallScreen ? 'h-[40px] w-[300px] ' : 'max-h-[100px] min-h-[100px] min-w-[380px] max-w-[350px] rounded-lg'} flex p-0   border-[#593228] ${result === 'win' ? 'bg-[#38C968]' : 'bg-rose-500'}`}>
   <div className={`${isSmallScreen ? 'w-[150px] h-[30px]' : 'w-[120px]'} mb-4 relative z-10 }`}>
