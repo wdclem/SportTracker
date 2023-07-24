@@ -7,6 +7,8 @@ const scrapeNfl = async (req, res) => {
     const html = response.data
     const $ = cheerio.load(html)
     const nflgames = []
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
 
     // Scraping game data
     $('.game_summary.expanded.nohover').each((index, element) => {
@@ -19,12 +21,12 @@ const scrapeNfl = async (req, res) => {
       game.awayTeam = awayTeamElement.text().trim() 
       game.awayScore = awayTeamElement.parent().next('.right').text().trim()
       // Change date with date to keep year updated
-      game.awayLogo = `https://cdn.ssref.net/req/202305101/tlogo/pfr/${awayTeamElement.attr('href').split('/')[2]}-2023.png`
+      game.awayLogo = `https://cdn.ssref.net/req/202305101/tlogo/pfr/${awayTeamElement.attr('href').split('/')[2]}-${year}.png`
       // Extracting home team
       
       game.homeTeam = homeTeamElement.find('tr td:first-child a').text().trim()
       game.homeScore = homeTeamElement.find('tr td.right').text().trim()
-      game.homeLogo = `https://cdn.ssref.net/req/202305101/tlogo/pfr/${homeTeamElement.find('a').attr('href').split('/')[2]}-2023.png`
+      game.homeLogo = `https://cdn.ssref.net/req/202305101/tlogo/pfr/${homeTeamElement.find('a').attr('href').split('/')[2]}-${year}.png`
 
       // Extracting other game data like scores, winners, etc.
 

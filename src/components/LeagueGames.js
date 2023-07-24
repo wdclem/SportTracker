@@ -97,6 +97,7 @@ const LeagueGames = ({ selectedBackground, selectedBackgroundColor}) => {
                   score={game.awayScore}
                   result={game.awayScore > game.homeScore ? 'win' : 'lose'}
                   location='away'
+                  record = {game.awayRecord}
                 />
               </div>
               <div className="mr-4 pb-4">
@@ -106,6 +107,7 @@ const LeagueGames = ({ selectedBackground, selectedBackgroundColor}) => {
                   score={game.homeScore}
                   result={game.homeScore > game.awayScore ? 'win' : 'lose'}
                   location='home'
+                  record = {game.homeRecord}
                 />
               </div>
               </div>

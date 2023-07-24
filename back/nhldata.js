@@ -7,6 +7,8 @@ const scrapeNhl = async (req, res) => {
     const html = response.data
     const $ = cheerio.load(html)
     const nhlgames = []
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
 
     // Scraping game data
     $('.game_summary.nohover').each((index, element) => {
@@ -19,14 +21,21 @@ const scrapeNhl = async (req, res) => {
       game.awayTeam = awayTeamElement.text().trim() 
       game.awayScore = awayTeamElement.parent().next('.right').text().trim()
       // Change date with date to keep year updated
-      game.awayLogo = `https://cdn.ssref.net/req/202305101/tlogo/hr/${awayTeamElement.attr('href').split('/')[2]}-2023.png`
+      game.awayLogo = `https://cdn.ssref.net/req/202305101/tlogo/hr/${awayTeamElement.attr('href').split('/')[2]}-${year}.png`
       // Extracting home team
       
       game.homeTeam = homeTeamElement.find('tr td:first-child a').text().trim()
       game.homeScore = homeTeamElement.find('tr td.right').text().trim()
-      game.homeLogo = `https://cdn.ssref.net/req/202305101/tlogo/hr/${homeTeamElement.find('a').attr('href').split('/')[2]}-2023.png`
+      game.homeLogo = `https://cdn.ssref.net/req/202305101/tlogo/hr/${homeTeamElement.find('a').attr('href').split('/')[2]}-${year}.png`
 
-      // Extracting other game data like scores, winners, etc.
+      const standingsDiv = $('div.content_grid');
+
+      const awayTeamRow = standingsDiv.find(`a:contains(${game.awayTeam})`).closest('tr');
+      const homeTeamRow = standingsDiv.find(`a:contains(${game.homeTeam})`).closest('tr');
+  
+      game.awayRecord = awayTeamRow.find('td[data-stat="wins"]').text() + '-' + awayTeamRow.find('td[data-stat="losses"]').text();
+      game.homeRecord = homeTeamRow.find('td[data-stat="wins"]').text() + '-' + homeTeamRow.find('td[data-stat="losses"]').text();  
+
 
       // Pushing the game object to the games array
       nhlgames.push(game)
