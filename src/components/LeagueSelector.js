@@ -62,17 +62,18 @@ return (
       </span>
       <span className="text-[#000033]"> ScoreAPP.</span>
     </h1>
+    
     <p className="text-center text-lg font-normal lg:text-xl text-[#000033]">
-      At BSCORE, we are making it simple
+      Simplify your life with BSCORE - 
     </p>
     <p className="text-center text-lg font-normal lg:text-xl text-[#000033]">
-      check the results your favorite leagues.
+    One website, all your leagues united
     </p>
     <h2 className="text-center text-lg font-bold lg:text-xl text-[#000033]">
-      in ONE place
+    Get Started Today
     </h2>
     <h2 className="text-center text-2xl font-extrabold text-[#000033]">
-      Start now
+    Stay in the Game
     </h2>
     <h2 className="text-center text-2xl font-extrabold text-[#000033]">
     {'\u2192'}

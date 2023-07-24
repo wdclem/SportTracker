@@ -36,8 +36,9 @@ return (
                   <label for="message" className="block mb-2 text-sm font-medium text-[#1B5F32]">Your message</label>
                   <textarea id="message" rows="6" className="block p-2.5 w-full text-sm rounded-lg shadow-sm border bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500" placeholder="Leave a comment..."></textarea>
               </div>
-              <button type="submit" className="flex custom-button text-[#000033]rounded-lg sm:w-fit hover:text-[#000033] bg-[#FEFCD6] items-center">
-                <i className='mx-auto'>Send</i></button>
+              <button class="send-button">Send message</button>
+              {/* <button type="submit" className="flex custom-button text-[#000033]rounded-lg sm:w-fit hover:text-[#000033] bg-[#FEFCD6] items-center">
+                <i className='mx-auto'>Send</i></button> */}
           </form>
       </div>
         <SocialLinks/>
