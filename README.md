@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Sport Tracker App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Sport Tracker App Screenshot](src/assets/Bslogo.png)
 
-## Available Scripts
+## Table of Contents
+- [Introduction](#introduction)
+- [Demo](#demo)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Features](#features)
+- [Motivation](#motivation)
+- [Future Improvements](#futureimprovements)
 
-In the project directory, you can run:
+## Introduction
+Sport Tracker App is a full-fledged sports application designed to track and display the scores of the American League. The app utilizes web scraping techniques with Cheerio to gather data from sports-reference websites, allowing users to stay up-to-date with their favorite teams' scores and standings. This project has been a significant learning experience, as it was the first full-scale application developed from conception to deployment.
 
-### `npm start`
+## Demo
+![Sport Tracker App Demo](demo.gif)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies
+The Sport Tracker App is built using the following technologies:
+- Frontend: React with Tailwind CSS
+- Backend: Node.js with Express
+- Web Scraping: Cheerio
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
+To run the Sport Tracker App locally, follow these steps:
 
-### `npm test`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/wdclem/SportTracker.git
+   cd sport-tracker-app
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. ````
+   npm start
+   ```
+3. enjoy navigating :
+````
+http://localhost:3000
+````
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
+Tracking of scores for the American League games.
+User-friendly interface to view game results, team logos, and records.
+Scraping data from sports-reference websites to fetch the latest information.
+Responsive design for seamless usage on various devices.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Motivation
+This project was undertaken to gain hands-on experience in building a full-scale application from conception to deployment. The primary goal was to create a fully functional sports app focused on the American League, where users can easily access game scores and team information. Throughout the development process, the project served as a valuable learning experience, enhancing the following skills:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Understanding the importance of spending time on original design and defining a clear vision for the project.
+Exploring various design directions and making informed decisions for the best user experience.
+Gaining proficiency in web scraping techniques using Cheerio to retrieve sports data.
+Mastering React for creating interactive and responsive front-end components.
+Utilizing Tailwind CSS for streamlined and consistent UI design.
+Learning to handle full-scale projects and dealing with potential challenges during development.
 
-### `npm run eject`
+## Future Improvements
+The Sport Tracker App has been an exciting journey, I intends to continue improving and adding new features in the future. Some of the planned enhancements include:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Implementing user authentication and personalized tracking.
+Expanding coverage to other sports leagues.
+Enhancing data visualization with charts and graphs.
+Integrating real-time updates and notifications for game events.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Credits
+I express my gratitude to the developers and contributors of the following libraries and frameworks:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* React: https://reactjs.org/
+* Tailwind CSS: https://tailwindcss.com/
+* Cheerio: https://cheerio.js.org/
+* Node.js: https://nodejs.org/
+* Express: https://expressjs.com/
+* Sport-reference : https://www.sports-reference.com/
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you for using the Sport Tracker App. If you have any questions or suggestions, please feel free to contact me. Happy tracking! 🏀🎉
