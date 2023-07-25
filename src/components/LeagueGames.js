@@ -84,11 +84,11 @@ const LeagueGames = ({ selectedBackground, selectedBackgroundColor}) => {
       <h2 className="text-center text-2xl font-extrabold text-[#593228]">{selectedLeague} Result</h2>
     </div>
     <div className="max-h-[66vh] overflow-y-auto w-auto items-center justify-center">
-        {games.map((game) => {
+        {games.map((game, index) => {
           const awayScore = parseInt(game.awayScore, 10);
           const homeScore = parseInt(game.homeScore, 10);
           return (
-            <div key={game.id} className="flex">
+            <div key={index} className="flex">
               <div className="mx-auto my-auto md:inline-flex">
               <div className="mr-4">
                 <ScoreCard

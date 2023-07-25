@@ -22,16 +22,13 @@ const scrapeNba = async (req, res) => {
       console.log(homeTeamElement.html())
 
       // Extracting away team
-      
       game.awayTeam = awayTeamElement.text().trim() 
       game.awayScore = awayTeamElement.parent().next('.right').text().trim()
       // Change date with date to keep year updated
       game.awayLogo = `https://cdn.ssref.net/req/202305101/tlogo/bbr/${awayTeamElement.attr('href').split('/')[2]}-${year}.png`
       // Extracting home team
-      
       game.homeTeam = homeTeamElement.find('tr td:first-child a').text().trim()
       game.homeScore = homeTeamElement.find('tr td.right').text().trim()
-//      game.test = homeTeamElement.find('a').attr('href').split('/')[2]
       game.homeLogo = `https://cdn.ssref.net/req/202305101/tlogo/bbr/${homeTeamElement.find('a').attr('href').split('/')[2]}-${year}.png`
 
       const standingsDiv = $('div.standings_confs.data_grid.section_wrapper');
