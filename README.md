@@ -1,6 +1,6 @@
 # Sport Tracker App
 
-<img src="src/assets/BScorelogo2.png" width="100" height="100">
+<img src="src/assets/BScorelogo2.png" width="200" height="200">
 
 ## Table of Contents
 - [Introduction](#introduction)
