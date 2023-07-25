@@ -1,6 +1,6 @@
 # Sport Tracker App
 
-![Sport Tracker App Screenshot](src/assets/Bslogo.png)
+![Sport Tracker App Screenshot](src/assets/Bscorelogo2.png)
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -9,13 +9,13 @@
 - [Installation](#installation)
 - [Features](#features)
 - [Motivation](#motivation)
-- [Future Improvements](#futureimprovements)
+- [Future Improvements](#future_improvements)
 
 ## Introduction
 Sport Tracker App is a full-fledged sports application designed to track and display the scores of the American League. The app utilizes web scraping techniques with Cheerio to gather data from sports-reference websites, allowing users to stay up-to-date with their favorite teams' scores and standings. This project has been a significant learning experience, as it was the first full-scale application developed from conception to deployment.
 
 ## Demo
-![Sport Tracker App Demo](demo.gif)
+![Sport Tracker App Demo](bscore.gif)
 
 ## Technologies
 The Sport Tracker App is built using the following technologies:

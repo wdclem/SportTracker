@@ -20,7 +20,7 @@ const AboutSection = ({ selectedBackground, selectedBackgroundColor }) => {
             <p className="mb-4 font-light">BScore is a web application created as a personal project to learn React, Tailwind CSS, and Cheerio.</p>
             <p className="mb-4 font-light">The goal of this project is to provide a convenient way to find sports results all in the same place.</p>
             <p className="mb-4 font-light">Especially for those living in different time zones, like me in Finland, where US sports are often played during the night.</p>
-            <p className="mb-4 font-medium">The results are sourced from sport-reference.com, while the artworks used in the app are from Pixel Hall of Fame (www.pixelhalloffame.com). Please note that BScore is not intended for commercial purposes.</p>
+            <p className="mb-4 font-medium">The results are sourced from sport-reference.com. Please note that BScore is not intended for commercial purposes.</p>
           </div>
         </div>
       </div>
